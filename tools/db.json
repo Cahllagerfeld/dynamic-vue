@@ -8,6 +8,7 @@
         "id": 1,
         "name": "Starting Page",
         "apiPath": "/comments",
+        "dataPath": "",
         "routerPath": "/",
         "containers": []
       }
