@@ -10,7 +10,16 @@
         "apiPath": "/comments",
         "dataPath": "",
         "routerPath": "/",
-        "containers": []
+        "containers": [
+          {
+            "id": 1,
+            "name": "General",
+            "width": 6,
+            "translation": "general",
+            "headline": "Allgemein",
+            "components": []
+          }
+        ]
       }
     ]
   }
