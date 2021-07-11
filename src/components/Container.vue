@@ -6,10 +6,14 @@
         {{ containerConfig.headline }}
       </template>
       <template #content>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed
-        consequuntur error repudiandae numquam deserunt quisquam repellat libero
-        asperiores earum nam nobis, culpa ratione quam perferendis esse,
-        cupiditate neque quas!
+        <div v-if="containerConfig.components.length >= 1" class="p-grid">
+          <DynamicComponent
+            :class="'p-col-12 p-lg-' + component.width"
+            v-for="component in containerConfig.components"
+            :key="component.id"
+            :componentConfig="component.config"
+          />
+        </div>
       </template>
       <template #footer> </template>
     </Card>
@@ -19,11 +23,13 @@
 <script lang="ts">
 import { defineComponent, PropType } from "@vue/composition-api";
 import Card from "primevue/card";
-import { Container } from "../config/config.interface";
+import DynamicComponent from "./DynamicComponent.vue";
+import { Container } from "../interfaces/config/config.interface";
 
 export default defineComponent({
   components: {
     Card,
+    DynamicComponent,
   },
   props: {
     containerConfig: {

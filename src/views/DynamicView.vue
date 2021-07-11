@@ -2,7 +2,7 @@
   <div class="p-grid">
     <Container
       :containerConfig="container"
-      :class="'p-col-' + container.width"
+      :class="'p-col-12 p-lg-' + container.width"
       v-for="container in view.containers"
       :key="container.id"
     />
@@ -12,7 +12,7 @@
 <script lang="ts">
 import { defineComponent } from "@vue/composition-api";
 import { View } from "../interfaces/config/config.interface";
-import Container from "../interfaces/components/Container.vue";
+import Container from "../components/Container.vue";
 export default defineComponent({
   components: {
     Container,
@@ -27,7 +27,6 @@ export default defineComponent({
     root.$store.dispatch("getData", {
       apiPath: props.view.apiPath,
     });
-    // return { "ui" };
   },
 });
 </script>
