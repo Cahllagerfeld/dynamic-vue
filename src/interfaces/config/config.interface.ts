@@ -17,5 +17,12 @@ export interface Container {
   translation: string;
   width: number;
   headline: string;
-  components: any[];
+  components: Component[];
+}
+
+export interface Component {
+  id: number;
+  type: string;
+  width: number;
+  config: any;
 }

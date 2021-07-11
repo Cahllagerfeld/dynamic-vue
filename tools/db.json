@@ -17,6 +17,21 @@
             "width": 6,
             "translation": "general",
             "headline": "Allgemein",
+            "components": [
+              {
+                "id": 1,
+                "width": 6,
+                "type": "Kanban",
+                "config": {}
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "name": "General",
+            "width": 6,
+            "translation": "general",
+            "headline": "Allgemein",
             "components": []
           }
         ]
