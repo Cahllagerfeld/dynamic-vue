@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Card>
+    <PCard>
       <template #header> </template>
       <template #title>
         {{ containerConfig.headline }}
@@ -11,31 +11,31 @@
             :class="'p-col-12 p-lg-' + component.width"
             v-for="component in containerConfig.components"
             :key="component.id"
-            :componentConfig="component.config"
+            :componentConfig="component"
           />
         </div>
       </template>
       <template #footer> </template>
-    </Card>
+    </PCard>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent, PropType } from "@vue/composition-api";
-import Card from "primevue/card";
+import PCard from "primevue/card";
 import DynamicComponent from "./DynamicComponent.vue";
 import { Container } from "../interfaces/config/config.interface";
 
 export default defineComponent({
   components: {
-    Card,
+    PCard,
     DynamicComponent,
   },
   props: {
     containerConfig: {
       type: Object as PropType<Container>,
+      required: true,
     },
   },
-  //   setup(props) {},
 });
 </script>

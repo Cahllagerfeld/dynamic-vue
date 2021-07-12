@@ -15,6 +15,10 @@ import "primeflex/primeflex.css";
 import VueCompositionAPI from "@vue/composition-api";
 Vue.use(VueCompositionAPI);
 
+//Components
+import Card from "./components/customs/Card.vue";
+Vue.component("Card", Card);
+
 store.dispatch("getUI");
 
 Vue.config.productionTip = false;

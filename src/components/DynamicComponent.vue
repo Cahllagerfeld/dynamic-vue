@@ -1,6 +1,6 @@
 <template>
   <div>
-    <component :is="componentConfig.type" />
+    <component :is="componentConfig.type" :config="componentConfig.config" />
   </div>
 </template>
 
