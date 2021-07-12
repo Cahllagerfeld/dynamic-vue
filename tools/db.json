@@ -1,5 +1,20 @@
 {
-  "posts": [{ "id": 1, "title": "json-server", "author": "typicode" }],
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode",
+      "label": "Geschrieben am",
+      "written-at": "22.01.1999"
+    },
+    {
+      "id": 2,
+      "title": "Benjamin",
+      "author": "typicode",
+      "label": "Denksch ich net",
+      "written-at": "ASDF"
+    }
+  ],
   "comments": [{ "id": 1, "body": "some comment", "postId": 1 }],
   "profile": { "name": "typicode" },
   "config": {
@@ -7,7 +22,7 @@
       {
         "id": 1,
         "name": "Starting Page",
-        "apiPath": "/comments",
+        "apiPath": "/posts",
         "dataPath": "",
         "routerPath": "/",
         "containers": [
@@ -21,8 +36,19 @@
               {
                 "id": 1,
                 "width": 6,
-                "type": "Kanban",
-                "config": {}
+                "type": "Card",
+                "config": {
+                  "color": "#0f6bff",
+                  "headline": "title",
+                  "fields": [
+                    {
+                      "id": 1,
+                      "label": "label",
+                      "value": "written-at",
+                      "order": 10
+                    }
+                  ]
+                }
               }
             ]
           },
